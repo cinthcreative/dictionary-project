@@ -15,7 +15,7 @@ export default function Dictionary() {
 
   function search(event) {
     event.preventDefault();
-
+    // documentation: https://dictionaryapi.dev/
     let apiUrl = `http://api.dictionaryapi.dev/api/v2/entries/en-US/${keyword}`;
     console.log(apiUrl);
 
