@@ -11,7 +11,6 @@ export default function Dictionary(props) {
   let [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
-    console.log(response);
     setResults(response.data[0]);
   }
 
@@ -25,6 +24,7 @@ export default function Dictionary(props) {
 
     axios.get(apiUrl).then(handleResponse);
 
+    //documentation: https://www.pexels.com/api/documentation/?
     let pexelsApiKey =
       "563492ad6f91700001000001b3d4e04c430e4967a6eb24e46748bddb";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
